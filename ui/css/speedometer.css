@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+@font-face {
+  font-family: dijital;
+  src: url(../font/digital-7.ttf);
+}
+@font-face {
+  font-family: samsung;
+  src: url(../font/SamsungOne-400.ttf);
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  background: transparent;
+  font-family: samsung !important;
+  z-index: 999;
+  display: none;
+}
+.speedometer {
+  width: 400px;
+  height: 340px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+#myValues {
+  position: absolute;
+  left: -1000000px;
+}
+.icons {
+  width: 130px;
+  height: 50px;
+  bottom: 34px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+.iconsTOP,
+.iconsBOTTOM {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 50%;
+  padding: 0 5px;
+}
+.iconsBOTTOM svg {
+  width: 17px;
+  height: 17px;
+}
+
+svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  text-shadow: 0 0 15px blue;
+}
+.fuel {
+  width: 130px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.fuelvalue {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background: rgba(233, 182, 41, 1);
+  box-shadow: 0 0 3px rgba(233, 182, 41, 1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: width 0.3s;
+  border-radius: inherit;
+}
+.fuelicon {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  left: 5px;
+  top: 50%;
+  z-index: 3;
+}
+.fuelalert {
+  display: none;
+  position: absolute;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background: rgba(184, 20, 20, 0.8);
+  box-shadow: 0 0 3px rgba(184, 20, 20, 0.8);
+}
+
+.envelope {
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.speedNobe {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  transition: all 0.1s;
+}
+.speedPosition {
+  position: absolute;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  border-radius: 50%;
+  font-family: dijital;
+  color: #fff;
+  text-shadow: 0 0 4px #fff;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+}
+.fonts {
+  font-family: arial;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.speedNobe div {
+  background: #fff;
+  box-shadow: 0 0 6px #fff;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+}
+.numb,
+.nob {
+  transition: opacity 1s;
+  position: absolute;
+  opacity: 0.5;
+}
+.nob {
+  background: #eee;
+  box-shadow: 0 0 2px 1px #eee;
+}
+.numb {
+  color: #eee;
+  text-align: left;
+  overflow: hidden;
+  opacity: 0.5;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: bold;
+}
+.nob.bright {
+  opacity: 1;
+}
+.nob.danger {
+  background: rgba(184, 20, 20, 1);
+  box-shadow: 0 0 2px 1px rgba(184, 20, 20, 1);
+}
+.numb.bright {
+  opacity: 1;
+}
+.numb.danger {
+  color: rgba(184, 20, 20, 1);
+}
+
+.blink {
+  animation: blink 1s infinite ease-in-out;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

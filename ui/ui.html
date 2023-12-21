@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <title>UniqueFamily Speedometer</title>
+    <link href="css/speedometer.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="speedometer"><input id="myValues" /></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/speedometer.js"></script>
+    <script>
+      $(() => {
+        $("#myValues").speedometer({ eventListenerType: "keyup" });
+      });
+    </script>
+  </body>
+</html>
